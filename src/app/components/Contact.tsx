@@ -232,9 +232,6 @@ export function Contact() {
             I&apos;m always open to discussing new projects, opportunities, or partnerships.
             Feel free to reach out!
           </p>
-          <p className="mt-4 text-sm text-cyan-300/90">
-            Messages sent here go to your connected Google Form and are stored in the linked sheet.
-          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -439,7 +436,6 @@ export function Contact() {
     </section>
   );
 }
-
 
 
 
