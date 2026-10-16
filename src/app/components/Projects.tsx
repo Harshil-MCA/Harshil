@@ -20,7 +20,7 @@ export function Projects() {
           <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-cyan-500 mx-auto" />
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -28,17 +28,12 @@ export function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
-              whileHover={{
-                y: -20,
-                rotateX: 10,
-                rotateY: 5,
-                scale: 1.05,
-              }}
-              className="relative group"
+              whileHover={{ y: -8, rotateX: 2, rotateY: 1, scale: 1.01 }}
+              className="relative group h-full"
               style={{ transformStyle: "preserve-3d", perspective: 1000 }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-2xl blur-xl opacity-0 group-hover:opacity-70 transition-opacity" />
-              <div className="relative bg-gradient-to-br from-purple-900/30 to-cyan-900/30 rounded-2xl border border-purple-500/30 backdrop-blur-sm overflow-hidden">
+              <div className="relative h-full flex flex-col bg-gradient-to-br from-purple-900/30 to-cyan-900/30 rounded-2xl border border-purple-500/30 backdrop-blur-sm overflow-hidden">
                 <div className="relative aspect-video overflow-hidden bg-black">
                   <img
                     src={project.image}
@@ -49,15 +44,15 @@ export function Projects() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
                 </div>
 
-                <div className="p-6">
-                  <h3 className="text-2xl mb-3 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="text-xl mb-3 leading-snug break-words bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
                     {project.title}
                   </h3>
-                  <p className="text-gray-400 mb-4 line-clamp-3">
+                  <p className="text-gray-400 mb-4 line-clamp-4 leading-relaxed">
                     {project.description}
                   </p>
 
-                  <ul className="mb-4 space-y-2 text-sm text-gray-300">
+                  <ul className="mb-4 space-y-2 text-sm text-gray-300 flex-1">
                     {project.features.map((feature) => (
                       <li key={feature} className="flex gap-2">
                         <span className="text-cyan-400">•</span>

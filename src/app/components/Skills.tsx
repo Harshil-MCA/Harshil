@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { certifications, skillCategories, techStack } from "../content";
+import { certifications, highlights, skillCategories, techStack } from "../content";
 
 export function Skills() {
   return (
@@ -120,17 +120,14 @@ export function Skills() {
 
           <div className="bg-gradient-to-br from-purple-900/30 to-cyan-900/30 p-8 rounded-2xl border border-purple-500/30 backdrop-blur-sm">
             <h3 className="text-2xl mb-6 text-white">What I Bring</h3>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {[
-                "Software development",
-                "Cybersecurity fundamentals",
-                "Ethical hacking exposure",
-                "AI-powered application building",
-                "Database design and SQL",
-                "Collaboration and adaptability",
-              ].map((item) => (
-                <div key={item} className="p-4 rounded-xl bg-black/30 border border-cyan-500/20 text-gray-300">
-                  {item}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch">
+              {highlights.map(({ icon: Icon, title, description }) => (
+                <div key={title} className="h-full p-5 rounded-xl bg-black/30 border border-cyan-500/20 text-gray-300">
+                  <div className="w-10 h-10 mb-4 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                    <Icon size={20} className="text-white" />
+                  </div>
+                  <h4 className="text-lg text-white mb-2">{title}</h4>
+                  <p className="text-sm leading-relaxed text-gray-400">{description}</p>
                 </div>
               ))}
             </div>
