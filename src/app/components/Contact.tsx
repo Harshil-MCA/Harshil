@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "motion/react";
-import { Mail, Phone, MapPin, Send, Github, Linkedin, CheckCircle2, AlertCircle, X } from "lucide-react";
+import { Mail, MapPin, Send, Github, Linkedin, CheckCircle2, AlertCircle, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { profile } from "../content";
 
@@ -29,12 +29,6 @@ export function Contact() {
       label: "Email",
       value: profile.email,
       href: `mailto:${profile.email}`,
-    },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: profile.phone,
-      href: `tel:${profile.phone.replace(/[^+\d]/g, "")}`,
     },
     {
       icon: MapPin,

@@ -75,16 +75,18 @@ export function Education() {
                         {edu.degree}
                       </h3>
                       <p className="text-gray-300 mb-3">{edu.institution}</p>
-                      <p className="text-gray-400 mb-4">{edu.description}</p>
+                      {edu.description ? <p className="text-gray-400 mb-4">{edu.description}</p> : null}
 
-                      <div className="space-y-2">
-                        {edu.achievements.map((achievement, achIndex) => (
-                          <div key={achIndex} className="flex items-start gap-2">
-                            <Award size={16} className="text-cyan-400 mt-1 flex-shrink-0" />
-                            <span className="text-gray-300 text-sm">{achievement}</span>
-                          </div>
-                        ))}
-                      </div>
+                      {edu.achievements.length > 0 ? (
+                        <div className="space-y-2">
+                          {edu.achievements.map((achievement, achIndex) => (
+                            <div key={achIndex} className="flex items-start gap-2">
+                              <Award size={16} className="text-cyan-400 mt-1 flex-shrink-0" />
+                              <span className="text-gray-300 text-sm">{achievement}</span>
+                            </div>
+                          ))}
+                        </div>
+                      ) : null}
                     </div>
                   </div>
                 </motion.div>

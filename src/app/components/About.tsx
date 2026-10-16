@@ -1,9 +1,9 @@
 import { motion } from "motion/react";
-import { highlights, certifications, languages, profile, softSkills } from "../content";
+import { highlights, certifications, languages, softSkills } from "../content";
 
 export function About() {
   return (
-    <section id="about" className="min-h-screen py-20 relative overflow-hidden">
+    <section id="about" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-950/10 to-black" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -36,16 +36,14 @@ export function About() {
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl blur-xl opacity-50" />
               <div className="relative bg-gradient-to-br from-purple-900/50 to-cyan-900/50 p-8 rounded-2xl border border-purple-500/30 backdrop-blur-sm">
                 <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                  {profile.summary}
-                </p>
-                <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                  I hold an MCA from Soundarya Institute of Management and Science under
-                  Bangalore University, along with a B.Sc. in Computer Science from the
-                  College of Applied Science Vattamkulam.
+                  I am an early-career technology professional with an MCA and a B.Sc. in
+                  Computer Science, interested in software development, full-stack
+                  engineering, data analytics, and cybersecurity.
                 </p>
                 <p className="text-gray-300 text-lg leading-relaxed">
-                  My experience includes a cybersecurity internship, AI-powered projects,
-                  and practical work across Python, Java, SQL, Django, Flask, and OpenCV.
+                  My practical work includes web and mobile applications, REST API
+                  integration, database design, Python-based data processing and EDA,
+                  interactive Power BI reporting, computer vision, and AI-assisted features.
                 </p>
               </div>
             </motion.div>
@@ -56,7 +54,7 @@ export function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="grid grid-cols-2 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch"
           >
             {highlights.map((item, index) => (
               <motion.div
@@ -71,11 +69,11 @@ export function About() {
                   rotateX: 10,
                   z: 50,
                 }}
-                className="relative group"
+                className="relative group h-full"
                 style={{ transformStyle: "preserve-3d" }}
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-xl blur-xl opacity-0 group-hover:opacity-70 transition-opacity" />
-                <div className="relative bg-gradient-to-br from-purple-900/30 to-cyan-900/30 p-6 rounded-xl border border-purple-500/30 backdrop-blur-sm">
+                <div className="relative h-full bg-gradient-to-br from-purple-900/30 to-cyan-900/30 p-6 rounded-xl border border-purple-500/30 backdrop-blur-sm">
                   <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
                     <item.icon className="text-white" size={24} />
                   </div>

@@ -1,17 +1,16 @@
-import { Code2, Lightbulb, Rocket, Users } from "lucide-react";
+import { BarChart3, Code2, Lightbulb, Rocket, Users } from "lucide-react";
 
 export const profile = {
   name: "Harshil K",
-  role: "IT Professional | Cybersecurity & Software Development",
+  role: "Software Developer | Full-Stack Development | Data Analytics & Cybersecurity",
   location: "Bangalore, India",
-  phone: "+91-8089512323",
   email: "harshil.connect.in@gmail.com",
   linkedin: "https://linkedin.com/in/harshil-mca",
-  github: "https://github.com/Xavior-exe",
-  resumeUrl: "/harshil-k-resume.pdf",
+  github: "https://github.com/Harshil-MCA",
+  resumeUrl: "/Harshil.K_Resume.pdf",
   avatarUrl: "/Harshil.jpg",
   summary:
-    "Passionate IT professional with an MCA and a B.Sc. in Computer Science, possessing hands-on experience in software development, cybersecurity, ethical hacking, and AI-powered applications. Proficient in Python, Java, SQL, and web technologies, with strong problem-solving abilities and a commitment to continuous learning.",
+    "Computer Science graduate with an MCA background and hands-on project experience in full-stack web development, database-driven applications, data analytics, and cybersecurity fundamentals. Skilled in Python, Java, SQL, React, Django, Flask, and Power BI, with a focus on building practical applications and solving technical problems.",
 };
 
 export const navItems = [
@@ -19,169 +18,70 @@ export const navItems = [
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
+  { name: "Experience", href: "#experience" },
   { name: "Education", href: "#education" },
   { name: "Contact", href: "#contact" },
 ];
 
 export const highlights = [
-  {
-    icon: Code2,
-    title: "Software Development",
-    description: "Python, Java, SQL, Django, Flask, and modern web technologies.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Cybersecurity",
-    description: "Ethical hacking, information security, and threat analysis.",
-  },
-  {
-    icon: Rocket,
-    title: "AI Applications",
-    description: "Hands-on work with OpenCV and AI-powered project workflows.",
-  },
-  {
-    icon: Users,
-    title: "Team Player",
-    description: "Collaborative, adaptable, and focused on continuous learning.",
-  },
+  { icon: Code2, title: "Software Development", description: "Building web applications and database-driven systems using Python, Java, SQL, Django, Flask, and modern web technologies." },
+  { icon: BarChart3, title: "Data Analytics", description: "Working with Python, Pandas, SQL, Power BI, data cleaning, and exploratory data analysis to turn structured datasets into useful insights." },
+  { icon: Lightbulb, title: "Cybersecurity", description: "Foundational knowledge of ethical hacking, information security, vulnerability research, and cybersecurity practices." },
+  { icon: Rocket, title: "AI Applications", description: "Project experience with AI-assisted applications, OCR, computer vision, and API integration." },
+  { icon: Users, title: "Team Player", description: "Collaborative, adaptable, and focused on problem-solving, continuous learning, and effective teamwork." },
 ];
 
 export const skillCategories = [
-  {
-    title: "Programming Languages",
-    skills: [
-      { name: "Java", level: 90 },
-      { name: "Python", level: 90 },
-      { name: "C", level: 75 },
-      { name: "SQL", level: 85 },
-    ],
-  },
-  {
-    title: "Web Technologies",
-    skills: [
-      { name: "HTML", level: 95 },
-      { name: "CSS", level: 95 },
-      { name: "JavaScript", level: 85 },
-      { name: "Django", level: 80 },
-      { name: "Flask", level: 80 },
-    ],
-  },
-  {
-    title: "Cybersecurity & Tools",
-    skills: [
-      { name: "Ethical Hacking", level: 85 },
-      { name: "Information Security", level: 85 },
-      { name: "Blue Team Analysis", level: 80 },
-      { name: "Git / GitHub", level: 90 },
-      { name: "OpenCV", level: 75 },
-    ],
-  },
+  { title: "Programming and Query Languages", skills: ["Python", "Java", "JavaScript", "C", "SQL"] },
+  { title: "Frontend Development", skills: ["HTML", "CSS", "React", "Responsive Web Development"] },
+  { title: "Backend Development and APIs", skills: ["Django", "Django REST Framework", "Flask", "Node.js", "Express.js", "REST APIs"] },
+  { title: "Databases", skills: ["MySQL", "MongoDB", "Database Design", "Relational Database Concepts"] },
+  { title: "Data Analytics", skills: ["Python Pandas", "Exploratory Data Analysis (EDA)", "Data Cleaning", "Data Quality Checks", "Power BI", "Microsoft Excel", "Data Visualization"] },
+  { title: "Mobile Development and AI", skills: ["Flutter", "Dart", "Firebase", "Google ML Kit OCR", "Google Gemini API Integration"] },
+  { title: "Computer Vision and Security", skills: ["OpenCV", "Ethical Hacking Fundamentals", "Information Security", "Cybersecurity Fundamentals"] },
+  { title: "Tools", skills: ["Git", "GitHub", "VS Code", "Windows", "Linux"] },
 ];
 
-export const techStack = [
-  "Java",
-  "Python",
-  "C",
-  "SQL",
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "Django",
-  "Flask",
-  "MySQL",
-  "Git",
-  "GitHub",
-  "Windows",
-  "Linux",
-  "VS Code",
-  "OpenCV",
-  "MS Excel",
-];
+export const techStack = ["Python", "Java", "JavaScript", "SQL", "React", "Django", "Flask", "Power BI", "Flutter", "OpenCV", "Git", "GitHub"];
 
 export const certifications = [
-  "Blue Team Security Analyst & Cybersecurity Practitioner Program - Cyberverse Foundation",
-  "Introduction to Cybersecurity, Cyber Threat Management, Computer Hardware Basics & Python Essentials 1 - CISCO",
-  "Embedded Systems & IoT with AI - XCEL Corp",
-  "Introduction to Artificial Intelligence (AI) - IBM",
-  "Machine Learning Using Python & Introduction to Front End Development - Simplilearn",
-  "Java Programming: Mastering the Fundamentals & Computer Networking - Scaler",
-  "Introduction to UNIX - Infosys Springboard",
-  "Database Management System - Udemy",
+  "Machine Learning Using Python — Simplilearn",
+  "Introduction to Front End Development — Simplilearn",
+  "Introduction to Artificial Intelligence (AI) — IBM",
+  "Database Management System — Udemy",
+  "Java Programming: Mastering the Fundamentals — Scaler",
+  "Computer Networking — Scaler",
+  "Embedded Systems & IoT with AI — XCEL Corp",
+  "Introduction to UNIX — Infosys Springboard",
+  "Blue Team Security Analyst — Cyberverse Foundation",
+  "Cybersecurity Practitioner Program — Cyberverse Foundation",
+  "Introduction to Cybersecurity — Cisco",
+  "Cyber Threat Management — Cisco",
+  "Computer Hardware Basics — Cisco",
+  "Python Essentials 1 — Cisco",
 ];
 
 export const languages = ["English", "Malayalam", "Hindi", "Kannada", "Tamil"];
-
-export const softSkills = [
-  "Problem-Solving",
-  "Critical Thinking",
-  "Time Management",
-  "Teamwork",
-  "Adaptability",
-];
+export const softSkills = ["Problem-Solving", "Critical Thinking", "Time Management", "Teamwork", "Adaptability"];
 
 export const projects = [
-  {
-    title: "Attendance System - Face Recognition",
-    description:
-      "Web-based attendance system built with Python, Django, and OpenCV for real-time face detection, recognition, and automated attendance logging.",
-    image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-    tags: ["Python", "Django", "OpenCV", "MySQL"],
-    features: [
-      "Real-time facial detection and recognition",
-      "Automated attendance capture and database logging",
-      "Reduces proxy attendance with image processing",
-    ],
-  },
-  {
-    title: "TravelNex - AI-Powered Intelligent Travel Planner",
-    description:
-      "AI-powered travel planning web application integrated with multiple APIs for recommendations, itinerary generation, chatbot assistance, and place identification.",
-    image:
-      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-    tags: ["Python", "Flask", "MySQL", "JavaScript"],
-    features: [
-      "Personalized package recommendations",
-      "AI chatbot and itinerary generation",
-      "Destination gallery and place identification",
-    ],
-  },
+  { title: "SmartChef — AI-Powered Cooking Assistant", image: "/project-previews/smartchef-mobile.svg", imageAlt: "Conceptual SmartChef mobile app project preview", description: "A Flutter-based cooking and nutrition assistant supporting ingredient identification, weight extraction from digital weighing-scale images, and nutrition calculation using APIs and local datasets.", tags: ["Flutter", "Dart", "Firebase", "Google ML Kit OCR", "Google Gemini API", "USDA API"], features: ["Ingredient identification and weight OCR", "Nutrition calculation, recipe generation, and diet planning", "Shopping-list, authentication, profile, and history features"] },
+  { title: "SmartChef — Web-Based Nutrition and Recipe Planner", image: "/project-previews/smartchef-web.svg", imageAlt: "Conceptual SmartChef web app project preview", description: "A web application for nutrition analysis, recipe recommendations, and personalized diet planning, integrated with a Django backend and shared application data.", tags: ["React", "Python", "Django REST Framework", "SQL", "REST APIs"], features: ["React frontend connected to Django REST APIs", "Nutrition, recipe, diet-planning, and shopping-list features", "Authentication, profile, and history features"] },
+  { title: "Collaborative Task Manager — Full-Stack Web Application", image: "/project-previews/task-manager.svg", imageAlt: "Conceptual task manager project preview", description: "A full-stack task-management application developed using React and Node.js, with MongoDB Atlas for data storage.", tags: ["React", "Tailwind CSS", "Node.js", "Express.js", "MongoDB Atlas", "Mongoose", "JWT", "bcrypt"], features: ["React-based frontend", "Express backend and REST API architecture", "MongoDB Atlas integration"] },
+  { title: "TravelNex — Intelligent Travel Planner", image: "/project-previews/travelnex.svg", imageAlt: "Conceptual TravelNex project preview", description: "A travel-planning web application integrating travel-related APIs with a Flask backend and MySQL database to support destination information and personalized travel recommendations.", tags: ["Python", "Flask", "MySQL", "HTML", "CSS", "JavaScript", "Travel APIs"], features: ["Third-party travel and destination API integration", "Database-driven recommendations", "AI chatbot functionality and web-based travel information"] },
+  { title: "Face Recognition Attendance Management System", image: "/project-previews/attendance.svg", imageAlt: "Conceptual face recognition attendance project preview", description: "An attendance-management application using computer-vision techniques and a Django backend.", tags: ["Python", "Django", "OpenCV", "MySQL"], features: ["Face detection and recognition according to the implemented pipeline", "Database design for attendance records", "Validation logic intended to reduce proxy-attendance attempts"] },
+  { title: "Electric Vehicle Data Analysis and Power BI Dashboard", image: "/project-previews/ev-dashboard.svg", imageAlt: "Conceptual electric vehicle data dashboard project preview", description: "An electric-vehicle registration analysis project using a dataset of approximately 177,866 records and 17 columns.", tags: ["Python", "Pandas", "Power BI", "Data Cleaning", "EDA"], features: ["Data inspection, cleaning, and preparation", "Interactive Power BI visualizations", "Analysis of vehicle types, manufacturers, model years, range, and geographic distribution"] },
+  { title: "Accident Data Analysis", image: "/project-previews/accident-analysis.svg", imageAlt: "Neutral accident data analysis project preview; dashboard status not represented", description: "An accident-data analysis project focused on understanding road-accident patterns and contributing factors.", tags: ["Python", "Pandas", "Data Cleaning", "EDA", "Power BI"], features: ["Accident severity and time-based patterns", "Weather, lighting, road, vehicle, and casualty data", "Data quality and trend exploration"] },
+  { title: "Employee Database Management System", image: "/project-previews/employee-database.svg", imageAlt: "Conceptual employee database project preview", description: "A relational database project for organizing employee, department, project, and timesheet information.", tags: ["MySQL", "SQL", "Relational Database Design"], features: ["Relational tables and primary/foreign-key relationships", "JOIN, filtering, grouping, and aggregate queries", "Employee headcount, project hours, and salary analysis"] },
+];
+
+export const internships = [
+  { title: "Data Analytics Intern", organization: "Imarticus Learning, Koramangala, Bangalore", dates: "August 2026 — September 2026", description: "Selected for a structured, weekend-based Data Analytics internship, gaining practical exposure to data analytics, data visualization, analytical workflows, and structured data analysis." },
+  { title: "Cyber Security Intern", organization: "HKIT Cyber Security Solutions", dates: "June 2025 — July 2025", description: "Researched security vulnerabilities and systems, collaborated on documenting findings and analyzing evidence, and developed a foundational understanding of security practices and technical problem-solving." },
 ];
 
 export const education = [
-  {
-    degree: "Master of Computer Applications (MCA)",
-    institution: "Soundarya Institute of Management and Science, Bangalore University",
-    year: "2024 - 2026",
-    description:
-      "Focused on software development, cybersecurity, and AI-powered applications.",
-    achievements: [
-      "Advanced computing and application development",
-      "Security-oriented problem solving",
-      "Hands-on project work with modern web tools",
-    ],
-  },
-  {
-    degree: "B.Sc. Computer Science",
-    institution: "College of Applied Science Vattamkulam, Calicut University",
-    year: "2021 - 2024",
-    description:
-      "Built a strong foundation in programming, databases, and computer science concepts.",
-    achievements: [
-      "Programming and database fundamentals",
-      "Project-based learning in software development",
-      "Strong base for cybersecurity and AI exploration",
-    ],
-  },
-  {
-    degree: "Higher Secondary",
-    institution: "G H S S Niramaruthur",
-    year: "2019 - 2021",
-    description: "Completed higher secondary education with a science background.",
-    achievements: [
-      "Science stream preparation",
-      "Foundation for technical studies",
-      "Academic growth in mathematics and computing",
-    ],
-  },
+  { degree: "Master of Computer Applications (MCA)", institution: "Soundarya Institute of Management and Science — Bangalore University", year: "2024–2026", description: "", achievements: [] },
+  { degree: "B.Sc. Computer Science", institution: "College of Applied Science Vattamkulam — Calicut University", year: "2021–2024", description: "", achievements: [] },
+  { degree: "Higher Secondary", institution: "G H S S Niramaruthur", year: "2019–2021", description: "", achievements: [] },
 ];

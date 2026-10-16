@@ -1,9 +1,11 @@
 import { motion } from "motion/react";
 import { Github, Linkedin, Mail, Download } from "lucide-react";
+import { useState } from "react";
 import { profile } from "../content";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export function Hero() {
+  const [pointer, setPointer] = useState({ x: 0, y: 0 });
   const socialLinks = [
     { Icon: Github, href: profile.github, label: "GitHub" },
     { Icon: Linkedin, href: profile.linkedin, label: "LinkedIn" },
@@ -11,10 +13,21 @@ export function Hero() {
   ];
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
+      onPointerMove={(event) => {
+        if (event.pointerType !== "touch") {
+          const rect = event.currentTarget.getBoundingClientRect();
+          setPointer({ x: (event.clientX - rect.left) / rect.width - 0.5, y: (event.clientY - rect.top) / rect.height - 0.5 });
+        }
+      }}
+      onPointerLeave={() => setPointer({ x: 0, y: 0 })}
+    >
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl pointer-events-none"
+          style={{ x: pointer.x * 28, y: pointer.y * 18, opacity: 0.7 + Math.abs(pointer.y) * 0.3 }}
           animate={{
             scale: [1, 1.2, 1],
             rotate: [0, 180, 360],
@@ -26,7 +39,8 @@ export function Hero() {
           }}
         />
         <motion.div
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"
+          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl pointer-events-none"
+          style={{ x: pointer.x * -22, y: pointer.y * -14, opacity: 0.65 + Math.abs(pointer.y) * 0.35 }}
           animate={{
             scale: [1.2, 1, 1.2],
             rotate: [360, 180, 0],
@@ -39,17 +53,17 @@ export function Hero() {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="text-center">
           <motion.div
             initial={{ scale: 0, rotateY: 180 }}
             animate={{ scale: 1, rotateY: 0 }}
             transition={{ duration: 0.8, type: "spring" }}
-            className="mb-8 inline-block"
+            className="mb-8 inline-block relative z-20"
           >
-            <div className="relative w-48 h-48 mx-auto">
+            <div className="relative w-48 h-48 sm:w-56 sm:h-56 mx-auto">
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full blur-xl"
+                className="absolute -inset-2 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full blur-xl pointer-events-none -z-10"
                 animate={{
                   scale: [1, 1.2, 1],
                 }}
@@ -59,7 +73,7 @@ export function Hero() {
                   ease: "easeInOut",
                 }}
               />
-              <div className="relative w-full h-full rounded-full border-4 border-white/10 overflow-hidden shadow-2xl shadow-purple-500/20">
+              <div className="relative z-10 w-full h-full rounded-full border-4 border-white/10 overflow-hidden shadow-2xl shadow-purple-500/20 bg-black">
                 <ImageWithFallback
                   src={profile.avatarUrl}
                   alt={`${profile.name} profile photo`}
@@ -85,7 +99,7 @@ export function Hero() {
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="text-2xl md:text-4xl text-gray-300 mb-6"
+            className="text-xl md:text-4xl text-gray-300 mb-6 max-w-5xl mx-auto"
           >
             {profile.role}
           </motion.h2>
@@ -150,22 +164,23 @@ export function Hero() {
               </motion.a>
             ))}
           </motion.div>
+
+          <motion.div
+            className="mt-8 flex justify-center pointer-events-none"
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity }}
+            aria-hidden="true"
+          >
+            <div className="w-6 h-10 border-2 border-purple-500 rounded-full flex justify-center">
+              <motion.div
+                className="w-1.5 h-1.5 bg-purple-500 rounded-full mt-2"
+                animate={{ y: [0, 16, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              />
+            </div>
+          </motion.div>
         </div>
       </div>
-
-      <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 1.5, repeat: Infinity }}
-      >
-        <div className="w-6 h-10 border-2 border-purple-500 rounded-full flex justify-center">
-          <motion.div
-            className="w-1.5 h-1.5 bg-purple-500 rounded-full mt-2"
-            animate={{ y: [0, 16, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-          />
-        </div>
-      </motion.div>
     </section>
   );
 }

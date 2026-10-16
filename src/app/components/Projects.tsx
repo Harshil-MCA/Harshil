@@ -1,10 +1,9 @@
 import { motion } from "motion/react";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { projects } from "../content";
 
 export function Projects() {
   return (
-    <section id="projects" className="min-h-screen py-20 relative overflow-hidden">
+    <section id="projects" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-black via-cyan-950/10 to-black" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -40,13 +39,14 @@ export function Projects() {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-2xl blur-xl opacity-0 group-hover:opacity-70 transition-opacity" />
               <div className="relative bg-gradient-to-br from-purple-900/30 to-cyan-900/30 rounded-2xl border border-purple-500/30 backdrop-blur-sm overflow-hidden">
-                <div className="relative h-48 overflow-hidden">
-                  <ImageWithFallback
+                <div className="relative aspect-video overflow-hidden bg-black">
+                  <img
                     src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    alt={project.imageAlt}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
                 </div>
 
                 <div className="p-6">

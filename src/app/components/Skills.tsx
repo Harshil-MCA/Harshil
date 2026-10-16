@@ -3,7 +3,7 @@ import { certifications, skillCategories, techStack } from "../content";
 
 export function Skills() {
   return (
-    <section id="skills" className="min-h-screen py-20 relative overflow-hidden">
+    <section id="skills" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0">
         <motion.div
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"
@@ -32,7 +32,7 @@ export function Skills() {
           <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-cyan-500 mx-auto" />
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={categoryIndex}
@@ -53,7 +53,7 @@ export function Skills() {
                 <h3 className="text-2xl mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
                   {category.title}
                 </h3>
-                <div className="space-y-6">
+                <div className="flex flex-wrap gap-3">
                   {category.skills.map((skill, skillIndex) => (
                     <motion.div
                       key={skillIndex}
@@ -61,23 +61,9 @@ export function Skills() {
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: categoryIndex * 0.2 + skillIndex * 0.1 }}
+                      className="px-3 py-2 rounded-full bg-black/30 border border-purple-500/25 text-sm text-gray-300"
                     >
-                      <div className="flex justify-between mb-2">
-                        <span className="text-gray-300">{skill.name}</span>
-                        <span className="text-purple-400">{skill.level}%</span>
-                      </div>
-                      <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${skill.level}%` }}
-                          viewport={{ once: true }}
-                          transition={{
-                            delay: categoryIndex * 0.2 + skillIndex * 0.1 + 0.3,
-                            duration: 1,
-                          }}
-                          className="h-full bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full"
-                        />
-                      </div>
+                      {skill}
                     </motion.div>
                   ))}
                 </div>
