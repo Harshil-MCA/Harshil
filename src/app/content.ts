@@ -8,7 +8,7 @@ export const profile = {
   linkedin: "https://linkedin.com/in/harshil-mca",
   github: "https://github.com/Harshil-MCA",
   resumeUrl: "/Harshil.K_Resume.pdf",
-  avatarUrl: "/Harshil.jpg",
+  avatarUrl: "/Harshil.png",
   summary:
     "Computer Science graduate with an MCA background and hands-on project experience in full-stack web development, database-driven applications, data analytics, and cybersecurity fundamentals. Skilled in Python, Java, SQL, React, Django, Flask, and Power BI, with a focus on building practical applications and solving technical problems.",
 };
